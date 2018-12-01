@@ -30,14 +30,8 @@
     values.add(id);
     key.add("name");
     values.add(name);
-    key.add("age");
-    values.add(age);
-    key.add("weight");
-    values.add(weight);
     key.add("type");
     values.add(ani_type);
-    key.add("food");
-    values.add(food);
     if((ard!=null))
     {
     	key.add("arrival date");
@@ -48,6 +42,16 @@
    		key.add("expiry date");
     	values.add(expd);
    	}
+   	if(!(age.isEmpty()))
+   	{
+   		key.add("age");
+   	    values.add(age);
+   	}
+   	if(!(weight.isEmpty()))
+   	{
+   		key.add("weight");
+   	    values.add(weight);  
+   	}
    	if(!(scn.isEmpty()))
    	{
    		key.add("scintific name");
@@ -57,6 +61,11 @@
    	{
    		key.add("species");
     	values.add(spc);
+   	}
+   	if(!(food.isEmpty()))
+   	{
+   		key.add("food");
+   	    values.add(food);
    	}
    	if(!(health.isEmpty()))
    	{
@@ -74,6 +83,7 @@
 		Mongo m=new Mongo("127.0.0.1",27017);
 		DB db=m.getDB("wildlife1");
 		DBCollection col=db.getCollection("animals");
+		col.setWriteConcern(new WriteConcern(1));
 		col.insert(document);
 		out.println("successfull");%>
 		
@@ -82,7 +92,7 @@
 	}
 	catch(Exception e)
 	{
-		out.println("oops! sorry something went wrong");%>
+		out.println("sorry!the ID is already existed please insert new ID");%>
 		
 		<a href="add.html">BACK</a><%
 	}
