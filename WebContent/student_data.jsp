@@ -193,7 +193,7 @@ h1,h2,h3,h4,h5,h6 {
                                 { %>
                                     
                                     <tr> 
-                                    <td><%=rs.getInt("S_ID")%></td>
+                                    <td><%=rs.getString("S_ID")%></td>
                                     <td><%=rs.getString("name")%></td>
                                     <td><%=rs.getString("college")%></td>
                                     <td><%=rs.getString("phone")%></td>
@@ -217,7 +217,50 @@ h1,h2,h3,h4,h5,h6 {
                             }
                             %>
                     </div>
-                </div>    </div>
+                    <h2>Group Booking</h2>
+                    <div class="bs-example widget-shadow" data-example-id="contextual-table"> 
+                        <table class="table table-bordered"> <thead> <tr> <th>Coordinator Name</th><th>College</th> <th>Phone</th> <th>Email-ID</th><th>No_of_Tickets</th><th>Amount</th> </tr> </thead> 
+
+                          <tbody>
+                            <%  
+                            try
+                            {
+                            	Class.forName("com.mysql.jdbc.Driver");
+                            	Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/wildlife","root","");
+                            	Statement stmt=con.createStatement();
+                            	String sql="select * from bulk_stu";
+                            	ResultSet rs=stmt.executeQuery(sql);
+                            	while(rs.next())
+                                { %>
+                                    
+                                    <tr> 
+                                    <td><%=rs.getString("name")%></td>
+                                    <td><%=rs.getString("clg")%></td>
+                                    <td><%=rs.getString("phone")%></td>
+                                    <td><%=rs.getString("email")%></td>
+                                    <td><%=rs.getInt("cnt")%></td>
+                                    <td><%=rs.getFloat("amt")%></td> 
+                                    </tr>
+                                 
+                                <%
+                                }
+                                %>
+
+                           </tbody> </table> 
+                            <%
+                                rs.close();
+                                stmt.close();
+                                con.close();
+                                }
+                            catch(Exception e)
+                            {
+                                e.printStackTrace();
+                            }
+                            %>
+                    </div>
+                    
+                </div>   
+        </div>
 </div>
 
     <!--footer-->

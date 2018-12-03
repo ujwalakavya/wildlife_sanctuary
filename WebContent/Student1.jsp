@@ -1,45 +1,42 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Admin_Page-Wildlife</title>
+<title>Staff_Page-Wildlife</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<link href="bootstrap.min.css" rel='stylesheet' type='text/css' />
 
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="style.css" rel='stylesheet' type='text/css' />
 
 <!-- font-awesome icons CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- //font-awesome icons CSS-->
 
 <!-- side nav css file -->
-<link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
+<link href='SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>
 <!-- //side nav css file -->
-<!-- Calendar -->
-    <link rel="stylesheet" href="css/jquery-ui.css" type='text/css'/>
-<!-- //Calendar -->
  
  <!-- js-->
-<script src="js/cjquery-1.11.1.min.js" type='text/javascript'></script>
-<script src="js/modernizr.custom.js" type='text/javascript'></script>
+<script src="cjquery-1.11.1.min.js"></script>
+<script src="modernizr.custom.js"></script>
 
 <!--webfonts-->
-<link href="css/css.css" type='text/css' rel="stylesheet">
+<link href="css.css" rel="stylesheet">
 <!--//webfonts--> 
 
 <!-- chart -->
-<script src="js/Chart.js" type='text/javascript'></script>
+<script src="Chart.js"></script>
 <!-- //chart -->
 
 <!-- Metis Menu -->
-<script src="js/cmetisMenu.min.js" type='text/javascript'></script>
-<script src="js/custom.js" type='text/javascript'></script>
-<link href="css/custom.css" type='text/css' rel="stylesheet">
+<script src="cmetisMenu.min.js"></script>
+<script src="custom.js"></script>
+<link href="custom.css" rel="stylesheet">
 <!--//Metis Menu -->
 <style>
 #chartdiv {
@@ -48,8 +45,8 @@
 }
 </style>
     <!-- requried-jsfiles-for owl -->
-                    <link href="css/owl.carousel.css" type='text/css' rel="stylesheet">
-                    <script src="js/owl.carousel.js" type='text/javascript'></script>
+                    <link href="owl.carousel.css" rel="stylesheet">
+                    <script src="owl.carousel.js"></script>
                         <script>
                             $(document).ready(function() {
                                 $("#owl-demo").owlCarousel({
@@ -74,7 +71,7 @@ h1,h2,h3,h4,h5,h6 {
 </head> 
 
 <body class="cbp-spmenu-push">
-<script src='js/jquery.min.js' type='text/javascript'></script><script src="js/monetization.js" type="text/javascript"></script>
+<script src='jquery.min.js'></script><script src="monetization.js" type="text/javascript"></script>
 <script>
 (function(){
     if(typeof _bsa !== 'undefined' && _bsa) {
@@ -101,15 +98,10 @@ h1,h2,h3,h4,h5,h6 {
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
-              <li class="header">MAIN NAVIGATION<br>Admin Page</li>
+              <li class="header">MAIN NAVIGATION<br>Staff Page</li>
               <li class="treeview">
-                <a href="admin.html">
+                <a href="staff.html">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                </a>
-              </li>
-              <li class="treeview">
-                <a href="Register.html">
-                <i class="fa fa-plus-square-o"></i> <span>Register</span>
                 </a>
               </li>
               <li class="treeview">
@@ -118,15 +110,20 @@ h1,h2,h3,h4,h5,h6 {
                 <span>Menu</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
-               <ul class="treeview-menu">
-                  <li><a href="add.html"><i class="fa fa-angle-right"></i> Add </a></li>
-                  <li><a href="admin_update1.html"><i class="fa fa-angle-right"></i> Update </a></li>
+                <ul class="treeview-menu">
+                  <li><a href="st_update.html"><i class="fa fa-angle-right"></i> Update </a></li>
                 </ul>
-              </li>       
+              </li>		  
               <li class="treeview">
-                <a href="donation.html">
-                <i class="fa fa-edit"></i> <span>Donation Form</span>
+                <a href="#">
+                <i class="fa fa-edit"></i> <span>Ticket Forms</span>
+                <i class="fa fa-angle-left pull-right"></i>
                 </a>
+                <ul class="treeview-menu">
+                  <li><a href="visitor.html"><i class="fa fa-angle-right"></i>Visitor Ticket</a></li>
+                  <li><a href="student.html"><i class="fa fa-angle-right"></i>Student Ticket</a></li>
+                  <li><a href="camera.html"><i class="fa fa-angle-right"></i>Camera Ticket</a></li>              
+                </ul>
               </li>
               <li class="treeview">
                 <a href="#">
@@ -134,10 +131,11 @@ h1,h2,h3,h4,h5,h6 {
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="Ad_Anml_data.html"><i class="fa fa-angle-right"></i> Animal Data</a></li>
-                  <li><a href="Ad_vitr_data.jsp"><i class="fa fa-angle-right"></i>Visitor Data</a></li>
-                  <li><a href="staff_data.jsp"><i class="fa fa-angle-right"></i>Staff Data</a></li>
-                  <li><a href="donation_data.jsp"><i class="fa fa-angle-right"></i>Donation Data</a></li>
+                  <li><a href="st_anml_data.html"><i class="fa fa-angle-right"></i> Animal Data</a></li>
+                  <li><a href="st_vitr_data.jsp"><i class="fa fa-angle-right"></i>Visitor Data</a></li>
+                  <li><a href="student_data.jsp"><i class="fa fa-angle-right"></i>Student Data</a></li>
+                  <li><a href="st_staff_data.jsp"><i class="fa fa-angle-right"></i>Staff Data</a></li>
+                  <li><a href="st_donation_data.jsp"><i class="fa fa-angle-right"></i>Donation Data</a></li>
                 </ul>
               </li> 
             </ul>
@@ -160,8 +158,8 @@ h1,h2,h3,h4,h5,h6 {
             </div>
 
             <div class="header-right w-padding" style="letter-spacing:4px;">
-                <a href="index2.html" class="w-button w-white w-padding">Home</a>
-                <a href="index2.html#contact" class="w-button  w-white w-padding">Contact</a>
+                <a href="index_staff.html" class="w-button w-white w-padding">Home</a>
+                <a href="index_staff.html#contact" class="w-button  w-white w-padding">Contact</a>
                 <a href="index.html" class="w-button w-white w-padding">Logout</a>
             <div class="clearfix"></div>
             </div>
@@ -175,59 +173,28 @@ h1,h2,h3,h4,h5,h6 {
 
           <div class="form-grids row widget-shadow" data-example-id="basic-forms"> 
                         <div class="form-title">
-                            <h4>Add Animal Data Form</h4>
+                            <h4>StudentTicket Form</h4>
                         </div>
-                    <form class="form-horizontal" action="insert_ani_data.jsp" method="post">
+                    <form class="form-horizontal" action="student_bulk.jsp" method=P>
                     <div class="form-body">
                     <div class="form-group">
-                        ID:<input class="form-control1" type="text" name="id" id="r1" required=" "/>
+                       COORDINATOR NAME:<input class="form-control1" type="text" name="name" id="v1" required/>
                     </div>
                     <div class="form-group">
-                        NAME:<input class="form-control1" type="text" name="name" id="r2"/>
+                        COLLEGE:<input class="form-control1" type="text" name="clg" id="v1" required/>
                     </div>
                     <div class="form-group">
-                        SCIENTIFIC NAME:<input class="form-control1" type="text" name="scn" id="r3" required=" "/>
+                        PHONE:<input class="form-control1" type="tel" name="phn" placeholder="123-123-1234" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" name="phn" id="v2" required/>
                     </div>
                     <div class="form-group">
-                        ARRIVAL DATE:<input class="form-control1" type="text" name="ard" 
-                        id="datepicker1" required=" "/>
+                        EMAIL:<input class="form-control1" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="eml" placeholder="example@domain.com" name="eml" id="v3" required/>
                     </div>
                     <div class="form-group">
-                        EXPIRE DATE:<input class="form-control1" type="text" name="exd" 
-                        id="datepicker2"/>
+                       Ticket Count:<input class="form-control1" type="text" name="count" id="v1" required/>
                     </div>
+                   
                     <div class="form-group">
-                        AGE:<input class="form-control1" type="text" name="age" id="r6"/>
-                    </div>
-                    <div class="form-group">
-                       HEALTH:<input class="form-control1" type="text" name="hlt" id="r7"/>
-                    </div>
-                    <div class="form-group">
-                        FOOD:<input class="form-control1" type="text" name="food" id="r6"/>
-                    </div>
-                    <div class="form-group">
-                       SPECIES:<input class="form-control1" type="text" name="spc" id="r7"/>
-                    </div>
-                    <div class="form-group">
-                        WEIGHT:<input class="form-control1" type="text" name="wgt" id="r6"/>
-                    </div>
-                     <div class="form-group">
-                       ANIMAL TYPE: <select class="w-input w-padding-16"  name="type" required>
-                            <option value="Elephant">Elephant</option>
-                            <option value="Tiger">Tiger</option>
-                            <option value="Cheetah">Cheetah</option>
-                            <option value="Peacock">Peacock</option>
-                            <option value="Parrot">Parrot</option>
-                            <option value="Deer">Deer</option>
-                            <option value="Monkey">Monkey</option>
-                            <option value="Zebra">Zebra</option>
-                            <option value="Owl">Owl</option>
-                            <option value="animal type">ANIMAL TYPE</option>
-                            </select>
-                    </div>      
-                    
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-default">Add Data</button>
+                        <button type="submit" class="btn btn-default">Book Ticket</button>
                         <button type="reset" class="btn btn-default">Reset</button>
                     </div>
                     </div>
@@ -239,16 +206,16 @@ h1,h2,h3,h4,h5,h6 {
     <!--footer-->
         <footer class="footer">
           <a href="#" class="w-button w-deep-purple w-padding-large  w-margin-bottom"><i class="fa fa-arrow-up w-margin-right"></i>To the top</a>
-            <div class="copy_right">Copyright 2016 Â· All rights reserved. </div>
+            <div class="copy_right">Copyright 2016 · All rights reserved. </div>
         </footer>
     <!--//footer-->
     <!-- new added graphs chart js-->
     
-    <script src="js/Chart.bundle.js" type='text/javascript'></script>
-    <script src="js/utils.js" type='text/javascript'></script>
+    <script src="js/Chart.bundle.js"></script>
+    <script src="js/utils.js"></script>
     
     <!-- Classie --><!-- for toggle left push menu script -->
-        <script src="js/classie.js" type='text/javascript'></script>
+        <script src="classie.js"></script>
         <script>
             var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
                 showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -271,31 +238,20 @@ h1,h2,h3,h4,h5,h6 {
     <!-- //Classie --><!-- //for toggle left push menu script -->
         
     <!--scrolling js-->
-    <script src="js/jquery.nicescroll.js" type='text/javascript'></script>
-    <script src="js/scripts.js" type='text/javascript'></script>
+    <script src="jquery.nicescroll.js"></script>
+    <script src="scripts.js"></script>
     <!--//scrolling js-->
     
     <!-- side nav js -->
-    <script src='js/SidebarNav.min.js' type='text/javascript'></script>
+    <script src='SidebarNav.min.js' type='text/javascript'></script>
     <script>
       $('.sidebar-menu').SidebarNav()
     </script>
     <!-- //side nav js -->
-    <!-- js -->
-      <script src='js/jquery-1.10.2.min.js' type='text/javascript'></script>
-      <!-- //js -->
-      <!-- Calendar -->
-      <script src="js/jquery-ui.js" type='text/javascript'></script>
-      <script>
-         $(function () {
-            $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
-         });
-      </script>
-      <!-- //Calendar -->
     
     
     <!-- Bootstrap Core JavaScript -->
-   <script src="js/bootstrap.min.js" type='text/javascript'> </script>
+   <script src="bootstrap.min.js"> </script>
     <!-- //Bootstrap Core JavaScript -->
     
 </body>

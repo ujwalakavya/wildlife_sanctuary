@@ -34,7 +34,7 @@ try {
 }
 catch(Exception e)
 {
-	out.println("sorry!can't able to connecto databse");
+	out.println("sorry!can't able to connect to database");
 	e.printStackTrace();
 }
 %>

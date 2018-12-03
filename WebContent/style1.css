@@ -136,7 +136,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w-section,.w-code{margin-top:16px!important;margin-bottom:16px!important}
 .w-margin{margin:16px!important}.w-margin-top{margin-top:16px!important}.w-margin-bottom{margin-bottom:16px!important}
 .w-margin-left{margin-left:16px!important}.w-margin-right{margin-right:16px!important}
-.w-padding-small{padding:2px 10px 4px 2px!important}.w-padding{padding:8px 16px!important}.w-padding-large{padding:10px 10px 10px 2px!important}
+.w-padding-small{padding:1px}.w-padding{padding:8px 16px!important}.w-padding-large{padding:10px 10px 10px 2px!important}
 .w-padding-16{padding-top:16px!important;padding-bottom:16px!important}.w-padding-24{padding-top:24px!important;padding-bottom:24px!important}
 .w-padding-32{padding-top:32px!important;padding-bottom:32px!important}.w-padding-48{padding-top:48px!important;padding-bottom:48px!important}
 .w-padding-64{padding-top:64px!important;padding-bottom:64px!important;}
@@ -1254,4 +1254,4 @@ background-size: 100% 100%;
 
 
 
-    
+    s

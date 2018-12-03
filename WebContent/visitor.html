@@ -181,15 +181,16 @@ h1,h2,h3,h4,h5,h6 {
                         NAME:<input class="form-control1" type="text" name="name" id="v1" required/>
                     </div>
                     <div class="form-group">
-                        PHONE:<input class="form-control1" type="number" name="phn" id="v2" required/>
+                        PHONE:<input class="form-control1" type="tel" name="phn" placeholder="123-123-1234" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" id="v2" required/>
                     </div>
                     <div class="form-group">
-                        EMAIL:<input class="form-control1" type="email" name="eml" id="v3" required/>
+                        EMAIL:<input class="form-control1" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="eml" placeholder="example@domain.com" name="eml" id="v3" required/>
                     </div>
                     <div class="form-group">
                         TYPE:<select class="form-control1" name="type">
                             <option value="adult">ADULT</option>
                             <option value="child">CHILD</option>
+                            <option value="foreigner">Foreigner</option>
                              </select>
                     </div>
                     <div class="form-group">

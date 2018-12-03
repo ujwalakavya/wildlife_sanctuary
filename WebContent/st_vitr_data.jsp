@@ -161,8 +161,8 @@ h1,h2,h3,h4,h5,h6 {
             </div>
 
             <div class="header-right w-padding" style="letter-spacing:4px;">
-                <a href="index2.html" class="w-button w-white w-padding">Home</a>
-                <a href="index2.html#contact" class="w-button  w-white w-padding">Contact</a>
+                <a href="index_staff.html" class="w-button w-white w-padding">Home</a>
+                <a href="index_staff.html#contact" class="w-button  w-white w-padding">Contact</a>
                 <a href="index.html" class="w-button w-white w-padding">Logout</a>
             <div class="clearfix"></div>
             </div>

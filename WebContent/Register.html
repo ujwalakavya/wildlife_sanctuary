@@ -66,7 +66,6 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
 }
-
 </style>
 </head> 
 
@@ -192,11 +191,11 @@ h1,h2,h3,h4,h5,h6 {
                         SALARY:<input class="form-control1" type="number" name="sal" id="r5" required/>
                     </div>
                     <div class="form-group">
-                    format:yyy-yyy-yyyy<br/>
-                        PHONE:<input class="form-control1" type="number" name="phn" id="r6" pattern="[1-9]{1}[0-9]{9}"  required/>
+                    format:123-123-1234<br/>
+                        PHONE:<input class="form-control1" type="tel" name="phn" id="r6" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" autocomplete="tel"  required/>
                     </div>
                     <div class="form-group">
-                        EMAIL:<input class="form-control1" type="email" name="eml" id="r7"/>
+                        EMAIL:<input class="form-control1" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="eml" placeholder="example@domain.com" id="r7"/>
                     </div>
                     <div class="form-group">
                         PASSWORD:<br>
@@ -240,7 +239,6 @@ h1,h2,h3,h4,h5,h6 {
                 disableOther( 'showLeftPush' );
             };
             
-
             function disableOther( button ) {
                 if( button !== 'showLeftPush' ) {
                     classie.toggle( showLeftPush, 'disabled' );

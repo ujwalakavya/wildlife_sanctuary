@@ -18,8 +18,10 @@ type=request.getParameter("type");
 float fee;
 if(type.equals("adult"))
 	fee=70;
-else
+else if(type.equals("child"))
 	fee=40;
+else
+	fee=300;
 try {
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/wildlife","root","");

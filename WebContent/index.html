@@ -74,7 +74,8 @@ h1,h2,h3,h4,h5,h6 {
     <div class="w-right w-hide-small">
       <a href="#about" class="w-bar-item w-button">About</a>
       <a href="login.html" class="w-bar-item w-button">Login</a>
-      <a href="#Book_Ticket" class="w-bar-item w-button">Book_Ticket</a>
+      <a href="#Book_Ticket" class="w-bar-item w-button">BookTicket</a>
+      <a href="#Animals" class="w-bar-item w-button">Animals</a>
       <a href="#contact" class="w-bar-item w-button">Contact</a>
     </div>
 
@@ -167,7 +168,7 @@ h1,h2,h3,h4,h5,h6 {
     
     <!-- Gallery -->
     <div class="gallery" id="Gallery">
-        <h1  w-container class="w-center"><span>Gallery</span></h1>  
+        <h1  class="w-center"><span>Gallery</span></h1>  
             <div class="w-row">    
                 <div class="col-md-6 col-sm-4 col-xs-6 gal_box">
                   <a href="ele.jpg" rel="prettyPhoto[gallery1]"><img src="ele.jpg" class="img-responsive"/></a>
@@ -192,19 +193,20 @@ h1,h2,h3,h4,h5,h6 {
   </div>
 </div>
 
-
+<div class="w-content" style="max-width:1600px">
 <!-- Ticket Booking -->
-     <div class="w-container w-padding-64" id="Book_Ticket">
+     <div class="w-col m8" id="Book_Ticket">
       <h1>Visitors Ticket Form</h1><br><br>
       <marquee>Online booking for STUDENT TICKET is not available,please take ticket on-the-spot</marquee>
       <form action="Visitor.jsp" method="post">
         <div class="form-body">
                        <p> NAME:<input class="w-input w-padding-16"  type="text" name="name" id="v1" required/></p>
-                        <p>PHONE:<input class="w-input w-padding-16"  type="number" name="phn" id="v2" required/></p>
-                        <p>EMAIL:<input class="w-input w-padding-16"  type="email" name="eml" id="v3" required/>
+                        <p>PHONE:<input class="w-input w-padding-16"  type="tel" name="phn" placeholder="123-123-1234" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" name="phn" id="v2" required/></p>
+                        <p>EMAIL:<input class="w-input w-padding-16"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="eml" placeholder="example@domain.com" name="eml" id="v3" required/>
                         <p>TYPE:<select class="w-input w-padding-16"  name="type">
                             <option value="adult">ADULT</option>
                             <option value="child">CHILD</option>
+                             <option value="foreigner">Foreigner</option>
                             </select>
                           </p>
                         <p><button type="submit" class="btn btn-default">Book Ticket</button>
@@ -212,6 +214,31 @@ h1,h2,h3,h4,h5,h6 {
         </div>
       </form>   
      </div>
+     <!--animal Data-->
+     <div class="w-col m4 w-padding-small" id="Animals">
+        <h1>Search For Animal</h1><br><br>
+        <form action="Animal_retrieve.jsp" method="post">
+            <div class="form-group">
+                 ANIMAL TYPE: <select class="w-input w-padding-16"  name="id" required>
+                            <option value="Elephant">Elephant</option>
+                            <option value="Tiger">Tiger</option>
+                            <option value="Cheetah">Cheetah</option>
+                            <option value="Peacock">Peacock</option>
+                            <option value="Parrot">Parrot</option>
+                            <option value="Deer">Deer</option>
+                            <option value="Monkey">Monkey</option>
+                            <option value="Zebra">Zebra</option>
+                            <option value="Owl">Owl</option>
+                            <option value="type">ANIMAL TYPE</option>
+                            </select>
+             </div> 
+	         <div class="form-group">
+                        <button type="submit" class="btn btn-default">Search</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+             </div>
+          </form>
+        </div>
+</div>
 
   <!-- Contact Section -->
   <div class="w-container w-padding-small" id="contact">

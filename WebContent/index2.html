@@ -66,7 +66,7 @@ h1,h2,h3,h4,h5,h6 {
     <!-- Right-sided navbar links-->
     <div class="w-right w-hide-small">
       <a href="#about" class="w-bar-item w-button">About</a>
-      <a href="#Book_Ticket" class="w-bar-item w-button">Book_Ticket</a>
+      <a href="#Book_Ticket" class="w-bar-item w-button">BookTicket</a>
       <a href="#contact" class="w-bar-item w-button">Contact</a>
       <a href="admin.html" class="w-bar-item w-button">Profile</a>
     </div>
@@ -129,8 +129,8 @@ h1,h2,h3,h4,h5,h6 {
       <form action="Visitor.jsp" method="post">
         <div class="form-body">
                        <p> NAME:<input class="w-input w-padding-16"  type="text" name="name" id="v1" required/></p>
-                        <p>PHONE:<input class="w-input w-padding-16"  type="number" name="phn" id="v2" required/></p>
-                        <p>EMAIL:<input class="w-input w-padding-16"  type="email" name="eml" id="v3" required/>
+                        <p>PHONE:<input class="w-input w-padding-16"  type="tel" name="phn" placeholder="123-123-1234" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" name="phn" id="v2" required/></p>
+                        <p>EMAIL:<input class="w-input w-padding-16"  type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="eml" placeholder="example@domain.com" name="eml" id="v3" required/>
                         <p>TYPE:<select class="w-input w-padding-16"  name="type">
                             <option value="adult">ADULT</option>
                             <option value="child">CHILD</option>
