@@ -187,8 +187,9 @@ h1,h2,h3,h4,h5,h6 {
 		        List list = new ArrayList(((LinkedHashMap<String, Object>) doc).values());
 		        List list1 = new ArrayList(((LinkedHashMap<String, Object>) doc).keySet());
 		        Iterator i=list1.iterator();
-		        Iterator j=list.iterator();
-		        while(i.hasNext() && j.hasNext()) {
+		        Iterator j=list.iterator();%>
+		        <img src="<%=doc.get("img") %>" width=300 height=300 alt="image cant be displayed"><br><br>
+		       <% while(i.hasNext() && j.hasNext()) {
 		        	out.print(i.next());
 			        out.print(": ");
 			        out.println(j.next());%>

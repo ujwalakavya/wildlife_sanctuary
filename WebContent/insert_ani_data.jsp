@@ -12,7 +12,7 @@
     <%@ page import="java.util.*" %>
     <%@ page import="java.lang.*" %>
     <%
-    String id,name,scn,ard,expd,age,weight,ani_type,health,food,spc;
+    String id,name,scn,ard,expd,age,weight,ani_type,health,food,spc,img;
     ArrayList<String> key=new ArrayList();
 	ArrayList<String> values=new ArrayList();
     id=request.getParameter("id");
@@ -26,6 +26,7 @@
     health=request.getParameter("hlt");
     food=request.getParameter("food");
     age=request.getParameter("age");
+    img=request.getParameter("img");
     key.add("_id");
     values.add(id);
     key.add("name");
@@ -72,6 +73,8 @@
    		key.add("health condition");
     	values.add(health);
    	}
+   	key.add("img");
+   	values.add(img);
    	
 	BasicDBObject document = new BasicDBObject();//BasicDBObject is data structure to store key and value pair
 	Iterator i=key.iterator();

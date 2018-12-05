@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-
+<script type="text/javascript"></script>
 <style>
 body, html {
   height: 100%;
@@ -73,13 +73,17 @@ body, html {
 		BasicDBObject query=new BasicDBObject("_id",id);
 		Iterator<DBObject> cur = col.find(query).iterator(); 
 		    while (cur.hasNext()) {
-		        DBObject doc = cur.next();
-		        out.println("Name:"+doc.get("name"));%><br><br><%
+		        DBObject doc = cur.next();%>
+		        <img src="<%=doc.get("img") %>" width=500 height=500 alt="animal image"><br><br>
+		        <%out.println("Name:"+doc.get("name"));%><br><br><%
 		        out.println("Scientific name:"+doc.get("scintific name"));%><br><br><% 
 		        out.println("Age:"+doc.get("age"));%><br><br><% 
 		        out.println("Type:"+doc.get("type"));%><br><br><% 
 		        out.println("Weight:"+doc.get("weight"));%><br><br><% 
-		        out.println("Species:"+doc.get("species"));%><br><br><% 
+		        out.println("Species:"+doc.get("species"));%><br><br><%
+		        %><img src="file:///home/hemanth/Pictures/s1.png" width=150 height=150 alt="animal image">
+		        <%
+		        
 		        }
 		    
 		}
@@ -88,5 +92,7 @@ body, html {
 	<p><a href="index.html">HOME</a></p>
     </center>
 </div>
+ 
 </body>
+
 </html>

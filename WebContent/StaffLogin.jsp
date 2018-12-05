@@ -10,7 +10,7 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.sql.*"%>
 <%
-String usr,pwd,id,pass;
+String usr,pwd,id,pass,deg;
 int f=0;
 usr=request.getParameter("usr");
 pwd=request.getParameter("pwd");
@@ -19,12 +19,20 @@ try
 Class.forName("com.mysql.jdbc.Driver");
 Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/wildlife","root","");
 Statement stmt=con.createStatement();
-ResultSet rs=stmt.executeQuery("select * from staff_login");
+ResultSet rs=stmt.executeQuery("SELECT * FROM staff,staff_login where staff.ID=staff_login.id");
 while(rs.next()) {
 	id=rs.getString("id");
 	pass=rs.getString("pwd");
+	deg=rs.getString("designation");
 	if(usr.equals(id) && pwd.equals(pass))
 	{
+		if(deg.equals("accountant"))
+		{
+			String redirectURL = "account.html";
+	        response.sendRedirect(redirectURL);
+			f=1;			
+		}
+		
 		String redirectURL = "staff.html";
         response.sendRedirect(redirectURL);
         
